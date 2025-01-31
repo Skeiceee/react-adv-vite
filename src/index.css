@@ -19,15 +19,19 @@ code {
   display: flex;
   flex-direction: row;
 }
-
 nav {
   background-color: #363a45;
   height: 100vh;
   margin-right: 15px;
-  overflow-y: scroll;
+  overflow-y: hidden; /* Oculta el scroll cuando no es necesario */
   text-align: center;
   width: 250px;
 }
+
+nav:hover {
+  overflow-y: auto; /* Muestra el scroll cuando el mouse está sobre el nav */
+}
+
 nav ul {
   align-items: center;
   display: flex;
